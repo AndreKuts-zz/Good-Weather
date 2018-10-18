@@ -24,9 +24,9 @@ class Weather: Object {
     @objc dynamic var city = ""
 
     convenience init(json: JSON, city: String) {
-        
+
         self.init()
-        
+
         self.date = json["dt"].doubleValue
         self.temp = json["main"]["temp"].doubleValue
         self.pressure = json["main"]["pressure"].doubleValue
@@ -38,20 +38,3 @@ class Weather: Object {
         self.city = city
     }
 }
-
-
-
-//    override static func indexedProperties() -> [String] {
-//        return ["date"]
-//    }
-    
-//    override static func ignoredProperties() -> [String] {
-//        return ["windDegrees", "windSpeed", "pressure", "humidity"]
-//    }
-    
-
-
-
-
-
-
