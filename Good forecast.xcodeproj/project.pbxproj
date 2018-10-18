@@ -67,13 +67,6 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		787EAA21202321D0005DC235 /* Some */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Some;
-			sourceTree = "<group>";
-		};
 		787EAA7320283BB5005DC235 /* Design */ = {
 			isa = PBXGroup;
 			children = (
@@ -104,7 +97,6 @@
 			isa = PBXGroup;
 			children = (
 				787EAA7320283BB5005DC235 /* Design */,
-				787EAA21202321D0005DC235 /* Some */,
 				7899010A2021B60400ADDA3E /* Model */,
 				789901092021B5FB00ADDA3E /* Controller */,
 				789900F72021A49800ADDA3E /* AppDelegate.swift */,

@@ -36,8 +36,6 @@ class DesignableTextField: UITextField {
             let imegeView = UIImageView(frame: CGRect (x: leftPadding, y: 0, width: 20, height: 20))
             imegeView.image = imege
             
-            
-            
             var width = 20 + leftPadding
             
             if borderStyle == .none || borderStyle == .line {
@@ -53,7 +51,4 @@ class DesignableTextField: UITextField {
             leftViewMode = .never
         }
     }
-    
-    
-
 }
