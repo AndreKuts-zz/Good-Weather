@@ -49,7 +49,6 @@ extension MainViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     }
     
     func selectedWeaerDay(arr: [Weather?], day: Int) -> [Weather?] {
-        
         var weatherR = [[Weather?](), [Weather?](), [Weather?](), [Weather?](), [Weather?](), [Weather?]()]
         var dayInt = [DateServise.getDay(arr[0]!)]
         var tmp = 0

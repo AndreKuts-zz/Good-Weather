@@ -69,7 +69,6 @@ class SerchCity: UIViewController, UITextFieldDelegate {
         }
     }
     
-    // Изменить список Приоритетных городов
     func chengeArr (arr: inout [String?], city: String) -> [String?] {
         var array = arr
         
@@ -79,7 +78,6 @@ class SerchCity: UIViewController, UITextFieldDelegate {
         return array
     }
     
-    // Назначение заглавия для кнопок
     func designateCity () {
         for tag in 0..<arrPriorityCities.count {
             let butt = view.viewWithTag(tag + 1)  as! UIButton
@@ -87,7 +85,6 @@ class SerchCity: UIViewController, UITextFieldDelegate {
         }
     }
     
-    // Проверка массива на наличие значения
     func checkingForValues <T: Equatable> (of valueToFind: T, in array: [T?]) -> Bool {
         for item in array {
             if item == valueToFind {

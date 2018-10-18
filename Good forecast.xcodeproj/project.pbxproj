@@ -22,6 +22,11 @@
 		78BE3308203328DD00094D23 /* DateServise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BE3307203328DD00094D23 /* DateServise.swift */; };
 		78CFD8BB203818AC00312DEA /* FirstController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CFD8BA203818AC00312DEA /* FirstController.swift */; };
 		78CFD8BD2038352000312DEA /* MainViewCreatedSubbView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CFD8BC2038352000312DEA /* MainViewCreatedSubbView.swift */; };
+		78E3142D2178CFAA009C5429 /* SerchButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78E3142C2178CFAA009C5429 /* SerchButton.xib */; };
+		78E314302178D381009C5429 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E3142F2178D381009C5429 /* ReusableView.swift */; };
+		78E314322178D3A9009C5429 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E314312178D3A9009C5429 /* NibLoadable.swift */; };
+		78E314342178D430009C5429 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E314332178D430009C5429 /* ActivityIndicator.swift */; };
+		78E314362178D48B009C5429 /* SerchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E314352178D48B009C5429 /* SerchButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +48,11 @@
 		78BE3307203328DD00094D23 /* DateServise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateServise.swift; sourceTree = "<group>"; };
 		78CFD8BA203818AC00312DEA /* FirstController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstController.swift; sourceTree = "<group>"; };
 		78CFD8BC2038352000312DEA /* MainViewCreatedSubbView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewCreatedSubbView.swift; sourceTree = "<group>"; };
+		78E3142C2178CFAA009C5429 /* SerchButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SerchButton.xib; sourceTree = "<group>"; };
+		78E3142F2178D381009C5429 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
+		78E314312178D3A9009C5429 /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
+		78E314332178D430009C5429 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		78E314352178D48B009C5429 /* SerchButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerchButton.swift; sourceTree = "<group>"; };
 		8B1DF1361F63385F72C53C4C /* Pods_Good_forecast.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Good_forecast.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -96,6 +106,8 @@
 		789900F62021A49700ADDA3E /* Good forecast */ = {
 			isa = PBXGroup;
 			children = (
+				78E3142E2178D36C009C5429 /* Protocols */,
+				78E3142B2178CEC9009C5429 /* CustomeViews */,
 				787EAA7320283BB5005DC235 /* Design */,
 				7899010A2021B60400ADDA3E /* Model */,
 				789901092021B5FB00ADDA3E /* Controller */,
@@ -129,6 +141,25 @@
 				78BE3307203328DD00094D23 /* DateServise.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		78E3142B2178CEC9009C5429 /* CustomeViews */ = {
+			isa = PBXGroup;
+			children = (
+				78E3142C2178CFAA009C5429 /* SerchButton.xib */,
+				78E314352178D48B009C5429 /* SerchButton.swift */,
+			);
+			path = CustomeViews;
+			sourceTree = "<group>";
+		};
+		78E3142E2178D36C009C5429 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				78E3142F2178D381009C5429 /* ReusableView.swift */,
+				78E314312178D3A9009C5429 /* NibLoadable.swift */,
+				78E314332178D430009C5429 /* ActivityIndicator.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		F921F29039BB2B9C97B08B18 /* Frameworks */ = {
@@ -201,6 +232,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				789901022021A49800ADDA3E /* LaunchScreen.storyboard in Resources */,
+				78E3142D2178CFAA009C5429 /* SerchButton.xib in Resources */,
 				7886820C203D557300AC4AD9 /* Media.xcassets in Resources */,
 				789900FD2021A49800ADDA3E /* Main.storyboard in Resources */,
 			);
@@ -261,13 +293,17 @@
 				787EAA7520283C0D005DC235 /* DesignableTextField.swift in Sources */,
 				789C5B0C20347D4F0025368E /* extensionMainViewController.swift in Sources */,
 				787EAA9A20288D70005DC235 /* Realm.swift in Sources */,
+				78E314362178D48B009C5429 /* SerchButton.swift in Sources */,
+				78E314302178D381009C5429 /* ReusableView.swift in Sources */,
 				789900FA2021A49800ADDA3E /* MainViewController.swift in Sources */,
 				787EAA702024C028005DC235 /* SerchCity.swift in Sources */,
 				780C642D20221690002D0FCB /* Weather.swift in Sources */,
 				787EAA9C2028AEC8005DC235 /* OpenWeatherService.swift in Sources */,
 				78BE3308203328DD00094D23 /* DateServise.swift in Sources */,
+				78E314342178D430009C5429 /* ActivityIndicator.swift in Sources */,
 				789900F82021A49800ADDA3E /* AppDelegate.swift in Sources */,
 				78CFD8BD2038352000312DEA /* MainViewCreatedSubbView.swift in Sources */,
+				78E314322178D3A9009C5429 /* NibLoadable.swift in Sources */,
 				78CFD8BB203818AC00312DEA /* FirstController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

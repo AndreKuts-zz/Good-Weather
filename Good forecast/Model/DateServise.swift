@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 class DateServise {
 
     static func getDateHourDate (_ weathe: Weather) -> String {

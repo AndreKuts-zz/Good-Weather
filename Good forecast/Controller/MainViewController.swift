@@ -16,8 +16,8 @@ class MainViewController: UIViewController {
     private let weathserService = OpenWeatherService()
     private let realms = RealmClass()
     
-    @IBOutlet weak var buttonWeatherIn: UIButton! // первая кнопка
-    @IBOutlet weak var buttDate: UIButton! // вторая кнопка
+    @IBOutlet weak var buttonWeatherIn: UIButton!
+    @IBOutlet weak var buttDate: UIButton!
     @IBOutlet weak var myScrolVIew: UIScrollView!
     @IBOutlet weak var iconWeather: UIImageView!
     @IBOutlet weak var degreesOfWeather: UILabel!
