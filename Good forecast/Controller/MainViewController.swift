@@ -11,9 +11,7 @@ import RealmSwift
 
 weak var MainViewControllerDelegate: UIViewController!
 
-
 class MainViewController: UIViewController {
-    
     
     private let weathserService = OpenWeatherService()
     private let realms = RealmClass()
@@ -29,16 +27,11 @@ class MainViewController: UIViewController {
     @IBOutlet weak var ViewForActivityScroll: UIView!
     @IBOutlet weak var activityScroll: UIActivityIndicatorView!
     
-    
     var weatherForSelectDay = ["Today", "Tomorrow", " ", " ", " ", " "]
-    
     var day: Int!
     
-    
-    //Вся полученная погода
     var weather = [Weather?]() {
         didSet {
-
             buttDate.setTitle(DateServise.getDayFullDate(weather[0]!), for: .normal)
             self.centralImegeAndDegreesView(arr: weather)
             self.createViewInScroll(arr: weather)
@@ -46,8 +39,7 @@ class MainViewController: UIViewController {
             self.weatherForSelectDay = arrDaysOfLoadedWeather(arr: weather)
         }
     }
-    
-    // Переменная город для загрузки погоды и
+
     var city: String! {
         didSet {
             ViewForActivityScroll.isHidden = false
@@ -64,26 +56,15 @@ class MainViewController: UIViewController {
             }
         }
     }
-    
-    
-    // ViewDidLoad
+
     override func viewDidLoad() {
         super.viewDidLoad()
         MainViewControllerDelegate = self
         change(butt: buttonWeatherIn)
         change(butt: buttDate)
-        
-//        setIconeForButton()
-        
-//        buttonWeatherIn.setImage(UIImage(named: "city-search"), for: .normal)
-        
-        
-//        self.realms.loadData(arr: &weather)
-        
     }
     
     // desing Button
-    
     func change(butt: UIButton) {
         butt.layer.shadowColor = UIColor.lightGray.cgColor
         butt.layer.shadowRadius = 6
@@ -92,18 +73,16 @@ class MainViewController: UIViewController {
         
     }
     
-    
-    
     // MARK: - кнопки для пикерВиюДаты
     @IBAction func getWeatherForDay(_ sender: UIButton) {
         self.viewForPicker.isHidden = true
         pickerViewDay.reloadAllComponents()
     }
+
     @IBAction func setDateForWeather(_ sender: UIButton) {
         self.viewForPicker.isHidden = false
         pickerViewDay.reloadAllComponents()
     }
-    
     
     // Изменение Имедже и градусов
     private func centralImegeAndDegreesView (arr: [Weather?]) {
@@ -114,20 +93,16 @@ class MainViewController: UIViewController {
         }
     }
     
-    
     //MARK: - Navigate
     @IBAction func unwindeSegue ( _ sender: UIStoryboardSegue) {
     }
-    
     
     func setIconeForButton () {
         if let imege = buttonWeatherIn.imageView {
             imege.image = UIImage(named: "city-search")
         }
     }
-    
-    
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showSerchCity" {
             if self.viewForPicker.isHidden {
@@ -137,13 +112,4 @@ class MainViewController: UIViewController {
             }
         }
     }
-    
-    
-    
-    
 }
-
-
-
-
-

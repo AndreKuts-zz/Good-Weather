@@ -11,10 +11,7 @@ import Alamofire
 import SwiftyJSON
 import RealmSwift
 
-
-
 class OpenWeatherService {
-    
     
     let baseUrl = "https://api.openweathermap.org"
     let apiKey = "356d537d0b012ce18e2c757137a144d8"
@@ -24,7 +21,6 @@ class OpenWeatherService {
     // Load URl Alamofire
     func loadWeatherData(city: String, completion: @escaping ([Weather]) -> Void)  {
         
-        
         let path = "/data/2.5/forecast"
         let parameters: Parameters = [
             "q": city,
@@ -33,7 +29,7 @@ class OpenWeatherService {
             "cnt" : "40" */
         ]
         
-        // Сам запрос
+        // Request
         let url = baseUrl+path
         Alamofire.request(url, method: .get, parameters: parameters).responseData { repsons in
             guard let data = repsons.data else {
@@ -55,7 +51,7 @@ class OpenWeatherService {
         }
     }
     
-    // Введение неправильного города
+    // Wrong sity
     func enteredIncorrectlycity(_ city: String?) -> UIAlertController {
         let alert = UIAlertController(title: "City (\(city ?? "")) not found", message: "Try to enter the correct city", preferredStyle: UIAlertControllerStyle.alert)
         let alertAction = UIAlertAction (title: "ok", style: UIAlertActionStyle.default, handler: nil)
@@ -63,7 +59,4 @@ class OpenWeatherService {
         
         return alert
     }
-    
-    
-    
 }

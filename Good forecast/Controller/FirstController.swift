@@ -14,45 +14,7 @@ class FirstController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        if textField.text == nil {
-//
-//        } else {
-//            self.performSegue(withIdentifier: "goToMainView", sender: self)
-//        }
-        
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    
-    
-//    
-//    // Нажатие кнопки GO
-//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-//        self.performSegue(withIdentifier: "goToMainView", sender: self)
-//        return true
-//    }
-//    
-//    
-//
-//    
-//    // MARK: - Navigation
-//
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        
-//        if segue.identifier == "goToMainView" {
-//            let destVC = segue.destination as! MainViewController
-//            if let city = textField.text {
-//                destVC.city = city
-//            }
-//        }
-//        
-//    }
-//    
-
 }
 
 

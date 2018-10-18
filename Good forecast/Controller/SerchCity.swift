@@ -15,12 +15,7 @@ class SerchCity: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var viewForButton: UIView!
     var city: String!
     
-    var arrPriorityCities: [String?] = ["Moscow", "London", "Bangkok", "New York", "Minsk"] {
-        didSet {
-            print(arrPriorityCities)
-        }
-    }
-    
+    var arrPriorityCities: [String?] = ["Moscow", "London", "Bangkok", "New York", "Minsk"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,15 +23,8 @@ class SerchCity: UIViewController, UITextFieldDelegate {
         designateCity()
         textFieldDesign()
         change()
-        
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-    
-    
-    
+
     @IBAction func selectСity(_ sender: UIButton) {
         if let text = sender.titleLabel?.text {
             self.city = text
@@ -44,8 +32,7 @@ class SerchCity: UIViewController, UITextFieldDelegate {
             performSegue(withIdentifier: "goToViewController", sender: self)
         }
     }
-    
-    
+
     func textFieldDesign () {
         textField.layer.shadowOpacity = 1.0
         textField.layer.shadowRadius = 6
@@ -53,15 +40,12 @@ class SerchCity: UIViewController, UITextFieldDelegate {
         textField.layer.shadowOffset = CGSize(width: 0, height: 0)
     }
     
-    
-    
     func change() {
         buttCancel.layer.shadowColor = UIColor.lightGray.cgColor
         buttCancel.layer.shadowRadius = 6
         buttCancel.layer.shadowOpacity = 1.0
         buttCancel.layer.shadowOffset = CGSize(width: 0, height: 0)
     }
-    
     
     // Нажатие кнопки Go на клавиатуре
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -74,7 +58,6 @@ class SerchCity: UIViewController, UITextFieldDelegate {
         }
         return false
     }
-    
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -90,19 +73,11 @@ class SerchCity: UIViewController, UITextFieldDelegate {
     func chengeArr (arr: inout [String?], city: String) -> [String?] {
         var array = arr
         
-        if checkingForValues(of: city, in: arr) {
-            
-            
-            
-        }
-        
         array.insert(city, at: 0)
         array.removeLast()
         arr = array
         return array
     }
-    
-    
     
     // Назначение заглавия для кнопок
     func designateCity () {
@@ -111,8 +86,6 @@ class SerchCity: UIViewController, UITextFieldDelegate {
             butt.setTitle(arrPriorityCities[tag], for: .normal)
         }
     }
-    
-    
     
     // Проверка массива на наличие значения
     func checkingForValues <T: Equatable> (of valueToFind: T, in array: [T?]) -> Bool {
@@ -123,24 +96,4 @@ class SerchCity: UIViewController, UITextFieldDelegate {
         }
         return false
     }
-    
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

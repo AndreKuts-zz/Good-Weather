@@ -9,7 +9,6 @@
 import Foundation
 import UIKit
 
-
 extension MainViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return weatherForSelectDay.count
@@ -19,7 +18,6 @@ extension MainViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         return 1
     }
     
-    
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return weatherForSelectDay[row]
     }
@@ -27,8 +25,6 @@ extension MainViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         self.day = row
     }
-    
-    
     
     // Возвращаем массив дней уже строковый вариант, наполение массива уникальными днямы
     func arrDaysOfLoadedWeather(arr: [Weather?]) -> [String] {
@@ -42,8 +38,6 @@ extension MainViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         return resolt
     }
     
-    
-    
     // Проверка массива на наличие значения
     func checkingForValues <T: Equatable> (of valueToFind: T, in array: [T?]) -> Bool {
         for item in array {
@@ -53,8 +47,6 @@ extension MainViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         }
         return false
     }
-    
-    
     
     func selectedWeaerDay(arr: [Weather?], day: Int) -> [Weather?] {
         
@@ -74,43 +66,4 @@ extension MainViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         }
         return weatherR[day]
     }
-    
-    
-    // MARK: - Возвращает массив погоды для выбраного дня
-    // Выбрать погодогу для определенного дня!
-    //    func createdArrDayWeather (number selectedDay: Int, allWEather: [Weather?]) -> [Weather?] {
-    //
-    //        let day = selectedDay * 8
-    //        print(selectedDay)
-    //        switch selectedDay {
-    //        case 0: return fori(day: day, arr: allWEather)
-    //        case 1: return fori(day: day, arr: allWEather)
-    //        case 2: return fori(day: day, arr: allWEather)
-    //        case 3: return fori(day: day, arr: allWEather)
-    //        case 4: return fori(day: day, arr: allWEather)
-    //        default:
-    //            makeAlertOk(title: "Выберите день", message: "Погоду можно посмотреть только на 5 дней")
-    //            return allWEather
-    //        }
-    //    }
-    
-    
-    //Маленькая функция для определения массива погоды
-    //    func fori (day: Int, arr: [Weather?]) -> [Weather?] {
-    //        var resolt = [Weather?]()
-    //        for i in day...(day + 8) {
-    //            resolt.append(arr[i]!)
-    //        }
-    //        return resolt
-    //    }
-    
-    
-    
-    
-    
-    
-    
-    
 }
-
-

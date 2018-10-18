@@ -10,12 +10,7 @@ import Foundation
 
 
 class DateServise {
-    
-    init() {
-        
-    }
-    
-    /// Возвращает время в текст
+
     static func getDateHourDate (_ weathe: Weather) -> String {
         let df = DateFormatter()
         let date = Date(timeIntervalSince1970: weathe.date)
@@ -25,8 +20,6 @@ class DateServise {
         return dateString
     }
     
-    
-    /// Возвращает день недели в текст
     static func getDayOfWeakDate (_ weathe: Weather) -> String {
         let df = DateFormatter()
         let date = Date(timeIntervalSince1970: weathe.date)
@@ -36,8 +29,6 @@ class DateServise {
         return dateString
     }
     
-    
-    /// Возвращает день недели, день месяца, название месяца, год в текст
     static func getDayFullDate (_ weathe: Weather) -> String {
         let df = DateFormatter()
         let date = Date(timeIntervalSince1970: weathe.date)
@@ -46,9 +37,7 @@ class DateServise {
         
         return dateString
     }
-    
-    
-    /// Возвращает день недели, день месяца в текст
+
     static func getWeakDayAndDay (_ weathe: Weather) -> String {
         let df = DateFormatter()
         let date = Date(timeIntervalSince1970: weathe.date)
@@ -57,7 +46,7 @@ class DateServise {
         
         return dateString
     }
-    
+
     static func getDay (_ weathe: Weather) -> Int {
         let df = DateFormatter()
         let date = Date(timeIntervalSince1970: weathe.date)
@@ -66,27 +55,4 @@ class DateServise {
         let resolt = Int(dateString)
         return resolt!
     }
-    
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

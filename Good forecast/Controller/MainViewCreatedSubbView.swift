@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 extension MainViewController {
     
     // Создание Алерта
@@ -18,7 +17,6 @@ extension MainViewController {
         alert.addAction(action)
         self.present(alert, animated: true, completion: nil)
     }
-    
     
     //MARK: - created label для времени
     func makeLabelForView (tmp: Int, arr: [Weather?]) -> UILabel {
@@ -49,7 +47,6 @@ extension MainViewController {
         return label
     }
     
-    
     // MARK: - Make Scroll
     func createViewInScroll (arr: [Weather?]) {
         var y = 0
@@ -57,7 +54,6 @@ extension MainViewController {
         myScrolVIew.contentSize = CGSize(width: self.view.frame.width - 32, height: 472)
         myScrolVIew.bounces = false
         
-        // создание view
         for i in 0...8 {
             if i > 7 {
                 myScrolVIew.contentSize.height =  (520 + CGFloat(sizeViewInScrole))
@@ -69,14 +65,12 @@ extension MainViewController {
             y += sizeViewInScrole
             myScrolVIew.addSubview(myViewInScroll)
             let label = self.makeLabelForView(tmp: i, arr: arr)
-            
+
             myViewInScroll.addSubview(label)
             myViewInScroll.addSubview(createdUIImege(image: (arr[i]?.weatherIcon)! + "2"))
             myViewInScroll.addSubview(makeLabel(index: i, arr: arr))
         }
     }
-    
-    
     
     // MARK: - created UIimage
     func createdUIImege (image: String) -> UIImageView {
@@ -85,12 +79,4 @@ extension MainViewController {
         uiImegeView.image = UIImage(named: image)
         return uiImegeView
     }
-    
-    
-    
-    
-    
 }
-
-
-
